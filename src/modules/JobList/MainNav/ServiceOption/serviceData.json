@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Reporting",
+        "value": "reporting",
+        "number": 129
+    },
+    {
+        "name": "Engagement with followers",
+        "value": "Engagement with followers",
+        "number": 123
+    },
+    {
+        "name": "Schedule posts",
+        "value": "scheduleposts",
+        "number": 123
+    },
+    {
+        "name": "Content creation",
+        "value": "contentcreation",
+        "number": 108
+    },
+    {
+        "name": "Page/channel evaluation",
+        "value": "Page/channel evaluation",
+        "number": 104
+    },
+    {
+        "name": "Action plan",
+        "value": "actionplan",
+        "number": 98
+    }
+]

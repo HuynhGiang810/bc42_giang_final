@@ -127,6 +127,7 @@ function Banner() {
                 name="keyword"
                 onChange={handleChange}
                 onKeyPress={handleKeyPress}
+               
               />
               <a
                 className={`${styles.submitButton} text-center`}

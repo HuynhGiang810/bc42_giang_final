@@ -9,7 +9,7 @@ function Services() {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: false,
     draggable: true,
@@ -21,280 +21,27 @@ function Services() {
       <div className={styles.container}>
         <h2>Popular services</h2>
 
-        <Slider {...settings} className="d-flex justify-content-center d-none d-xl-block">
-          <div className="d-flex justify-content-center slider-package">
-            {data.slice(0, 5).map((item) => {
-              return (
-                <div key={item.id} className={styles.services}>
-                  <a href={item.link}>
-                    <h4>
-                      <small>{item.action}</small>
-                      {item.title}
-                    </h4>
-                  </a>
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    data-uw-rm-ima-original="ai artists"
-                  />
-                </div>
-              );
-            })}
-          </div>
-          <div className="d-flex justify-content-center slider-package">
-            {data.slice(5, 10).map((item) => {
-              return (
-                <div key={item.id} className={styles.services}>
-                  <a href={item.link}>
-                    <h4>
-                      <small>{item.action}</small>
-                      {item.title}
-                    </h4>
-                  </a>
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    data-uw-rm-ima-original="ai artists"
-                  />
-                </div>
-              );
-            })}
-          </div>
-          <div className="d-flex justify-content-center slider-package">
-            {data.slice(6, 11).map((item) => {
-              return (
-                <div key={item.id} className={styles.services}>
-                  <a href={item.link}>
-                    <h4>
-                      <small>{item.action}</small>
-                      {item.title}
-                    </h4>
-                  </a>
-                  <img
-                    alt={item.title}
-                    src={item.image}
-                    data-uw-rm-ima-original="ai artists"
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </Slider>
-
-
-        {size.width < 576 && (
           <Slider {...settings} className="d-flex justify-content-center">
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(0, 1).map((item, index) => {
+              {data.map((item, index) => {
                 return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
+                  <div className="d-flex justify-content-center slider-package">
+                    <div key={item.id} className={styles.services}>
+                      <a href={item.link}>
+                        <h4>
+                          <small>{item.action}</small>
+                          {item.title}
+                        </h4>
+                      </a>
+                      <img
+                        alt={item.title}
+                        src={item.image}
+                        data-uw-rm-ima-original="ai artists"
+                      />
+                    </div>
                   </div>
                 );
               })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(1, 2).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(2, 3).map((item, ) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(3, 4).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(4, 5).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(5, 6).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(6, 7).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(7, 8).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(8, 9).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(9, 10).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-            <div className="d-flex justify-content-center slider-package">
-              {data.slice(10, 11).map((item, index) => {
-                return (
-                  <div key={item.id} className={styles.services}>
-                    <a href={item.link}>
-                      <h4>
-                        <small>{item.action}</small>
-                        {item.title}
-                      </h4>
-                    </a>
-                    <img
-                      alt={item.title}
-                      src={item.image}
-                      data-uw-rm-ima-original="ai artists"
-                    />
-                  </div>
-                );
-              })}
-            </div>
           </Slider>
-        )}
       </div>
     </div>
     </>

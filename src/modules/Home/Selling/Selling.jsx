@@ -9,7 +9,7 @@ function Selling() {
     const [playVideo, setPlayVideo] = useState(false);
     return (
         <div className={styles.spSection}>
-            <div className={`${styles.spWrapper} container`}>
+            <div className={`${styles.spWrapper}  container`}>
                 <div className="row align-items-center">
                     <div className={`col-12 col-lg-6 ${styles.spLeft}`}>
                         <h2 className={styles.h2Title}>A whole world of freelance talent at your fingertips</h2>
